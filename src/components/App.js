@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
 import "../styles/App.css";
-import primeNumber from "../function";
+import calculateAllPrimes  from "../function";
 
 const App = () => {
   return <OptimizeTheOperation />;
@@ -10,7 +10,7 @@ const App = () => {
 const OptimizeTheOperation = ({ onClick }) => {
   const [number, setNumber] = useState(10000);
 
-  const prime = useCallback(() => primeNumber(number), [number]);
+  const prime = useCallback(() => calculateAllPrimes (number), [number]);
 
   const submitHandler = (event) => {
     event.preventDefault();
