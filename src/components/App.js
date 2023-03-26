@@ -1,4 +1,4 @@
-import React, { Profiler, useMemo } from "react";
+import React, { useCallback } from "react";
 import { useState } from "react";
 import "../styles/App.css";
 import primeNumber from "../function";
@@ -31,7 +31,7 @@ const OptimizeTheOperation = ({ onClick }) => {
       <div className="width">
         Result of expensive operation:
         <ul>
-          {prime.map((item, index) => (
+          {prime().map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
